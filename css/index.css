@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --pistachito: #a4b07e;
+    --oliva: #707b50;
+    --cacas: #424206;
+    --vainilla: #d5cb8d;
+    --piel: #c7a685;
+    --coffe: #6d492f;
+}
