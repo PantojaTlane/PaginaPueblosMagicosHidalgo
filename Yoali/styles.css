@@ -1,0 +1,155 @@
+a{
+    text-decoration: none;
+}
+h2{
+    font-size: 26px;
+    line-height: 38px;
+    padding-bottom: 24px;
+    opacity: .9;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+}
+.Carousel{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #A4B07E;
+}
+.Carousel h4, h2,small,a{
+    margin: 0;
+    padding: 0;
+}
+
+/* imágenes */
+.slick-list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 304px;
+    padding: 10px 0px;
+    margin: 0px auto;
+    max-width: 90vw;
+    overflow: hidden;
+}
+.slick-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: .5s ease-in-out;
+}
+.slick{
+    position: relative;
+    width: 275px;
+    padding: 0 18px;
+    float: left;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+}
+.slick h4{
+    position: absolute;
+    z-index: 1;
+    font-size: 22px;
+    line-height: 23px;
+    color: #fff;
+    padding: 15px;
+}
+.slick h4 small{
+    font-size: 15px;
+    display: block;
+}
+.slick a img{
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+    transition: .3s ease-in-out;
+}
+.slick a img:hover{
+    opacity: .75;
+}
+
+/* botones */
+.slick-arrow{
+    border-radius: 30px;
+    background-color: #6D492F;
+    position: absolute;
+    z-index: 4;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+    border: 0;
+    cursor: pointer;
+}
+.slick-arrow:focus{
+    outline: 0;
+}
+.slick-arrow svg{
+    width: 12px;
+    height: 100%;
+    color:#fff;
+}
+.slick-prev{
+    left: 0px;
+}
+.slick-next{
+    right: 0px;
+}
+
+
+/*FOOTER**/
+footer{
+    position: relative;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 100%;
+    background-color: #424206;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/*Redes*/
+footer img{
+    border-radius: 15px;
+}
+footer .Social{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+footer .Social li{
+    list-style: none;
+}
+footer .Social li a {
+    font-size: 2em;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+footer .Social li a:hover{
+    transform: translateY(-10px);
+}
+/*Formulario*/
+
+/*Derechos*/
+footer p{
+    color: #d8d4c9;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+/*FOOTER FIN**/
