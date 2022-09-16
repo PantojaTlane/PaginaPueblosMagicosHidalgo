@@ -1,0 +1,91 @@
+.hide-left{
+    transform: translateX(-100%);
+}
+#introduccion{
+    width: 98%;
+    margin: 0 auto 2rem auto;
+    padding: 0.5rem;
+    color: #3b3b3b;
+    transition: all ease-in 0.6s;
+}
+#introduccion h1{
+    color: var(--oliva);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 1rem 0;
+}
+#introduccion #estructura{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#introduccion #estructura p{
+    width: 65%;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+#escudo-hgo{
+    width: 100px;
+    height: 100px;
+    background-image: url('../img/escudohidalgo.png');
+    background-position: center;
+    background-size: cover;
+}
+#image-estructura{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#image-estructura > b{
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 800px){
+    #introduccion h1{
+        font-size: 2rem;
+    }
+    #estructura p {
+        font-size: 1rem !important;
+    }
+    #image-estructura > b {
+        font-size: 0.6rem;
+    }
+}
+@media screen and (max-width: 540px){
+    #image-estructura > b {
+        display: none;
+    }
+}
+@media screen and (max-width: 475px){
+    #introduccion h1{
+        font-size: 1.5rem;
+    }
+    #estructura p {
+        font-size: 0.6rem !important;
+    }
+    #escudo-hgo {
+        width: 70px;
+        height: 70px;
+    }
+    #image-estructura {
+        width: 15%;
+    }
+}
+@media screen and (max-width: 345px){
+    #escudo-hgo {
+        display: none;
+    }
+    #introduccion #estructura p{
+        width: 100%;
+    }
+    #estructura {
+        display: block !important;
+    }
+}

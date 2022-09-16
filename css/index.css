@@ -11,3 +11,6 @@
     --piel: #c7a685;
     --coffe: #6d492f;
 }
+html{
+    scroll-behavior: smooth;
+}

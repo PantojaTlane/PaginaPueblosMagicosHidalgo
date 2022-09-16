@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/navegacion.css" />
     <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/introduccion.css" />
+    <link rel="stylesheet" href="./css/mapa.css" />
     <link rel="icon" href="" />
     <title>Pueblos Magicos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,7 +19,19 @@
     />
   </head>
   <body>
-    <nav>
+    <section id="nav-mobil" class="hide-menu-hamburguer">
+      <ul>
+        <li><a href="#">Pueblos mágicos</a></li>
+        <li><a href="#">Parques acuáticos</a></li>
+        <li><a href="#">Otros lugares</a></li>
+        <li><a href="#">Ocio</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </section>
+
+    <nav id="navegacion">
+      <div id="btn-hamburguer"><i class="fa-sharp fa-solid fa-bars"></i></div>
       <ul>
         <li><a href="#">Pueblos mágicos</a></li>
         <li><a href="#">Parques acuáticos</a></li>
@@ -35,25 +49,46 @@
           id="searchPlace"
           placeholder="Buscar lugar"
         />
+        <div id="resultados-search" class="hide-cont-search"></div>
       </div>
     </nav>
 
     <header>
       <div id="capa"></div>
       <p id="txtTitle">Hidalgo</p>
+      <div id="clima"></div>
     </header>
 
-    <section id="introduccion">
-      <h1></h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, sequi.
-        Voluptates nam eius deserunt voluptas tenetur id assumenda. Vel labore
-        in minima sit, asperiores quidem ipsa illo! Consequatur, maiores
-        nostrum?
-      </p>
+    <section id="introduccion" class="hide-left">
+      <h1>Conoce Hidalgo</h1>
+
+      <aside id="estructura">
+        <p>
+          Hidalgo, oficialmente Estado Libre y Soberano de Hidalgo, es uno de
+          los treinta y dos estados que conforman México. Su capital y ciudad
+          más poblada es Pachuca de Soto. Está dividido en ochenta y cuatro
+          municipios.
+        </p>
+        <div id="image-estructura">
+          <div id="escudo-hgo"></div>
+          <b>Escudo oficial del Estado Libre y Soberano de Hidalgo.</b>
+        </div>
+      </aside>
     </section>
 
-    <frame id="mapa"> </frame>
+    <section id="mapa">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956696.7695558931!2d-99.2828695510891!3d20.502259489269548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d10a0422ce2fe7%3A0x8152c5bf7940781b!2sHidalgo%2C%20M%C3%A9xico!5e0!3m2!1ses-419!2slt!4v1663225387173!5m2!1ses-419!2slt"
+        width="100%"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        id="frame-mapa"
+        class="hide-right"
+      ></iframe>
+    </section>
 
     <section id="pueblos-magicos-descripcion">
       <h1></h1>
@@ -118,5 +153,9 @@
       crossorigin="anonymous"
     ></script>
     <script src="./scripts/header.js"></script>
+    <script src="./scripts/introduccion.js"></script>
+    <script src="./scripts/mapa.js"></script>
+    <script src="./scripts/clima.js"></script>
+    <script src="./scripts/nav.js"></script>
   </body>
 </html>

@@ -1,0 +1,9 @@
+#mapa{
+    overflow: hidden;
+}
+#frame-mapa{
+    transition: all ease-in 0.6s;
+}
+.hide-right{
+    transform: translateX(100%);
+}
