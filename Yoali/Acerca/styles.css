@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.acerca{
+    display: flex;
+    justify-content: space-evenly;
+    overflow: auto;
+    flex-wrap: wrap;
+}
+
+.inf{
+    width: 780px;
+    margin: 30px;
+}
+.inf p{
+    text-align: justify;
+}
+.logo img{
+    margin: 10px;
+}
+
+@media screen and (max-width:1100px){
+    .logo img{
+        scale: 50%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .logo img{
+            scale: 60%;
+    }
+}
+@media screen and (max-width:450px){
+    .logo img{
+            scale: 70%;
+    }
+}
+@media screen and (max-width:300px){
+    .logo img{
+            scale: 90%;
+    }
+}
