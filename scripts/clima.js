@@ -18,9 +18,11 @@ function procesarDatos(datos){
 
     const {main:{temp,temp_min,temp_max},name,weather} = datos;
 
-    const temperatura = parseInt(temp - 273.15);
-    const temperaturaMin = parseInt(temp_min - 273.15);
-    const temperaturaMax = parseInt(temp_max - 273.15);
+    console.log(temp);
+
+    const temperatura = parseInt(temp - 272.15);
+    const temperaturaMin = parseInt(temp_min - 272.15);
+    const temperaturaMax = parseInt(temp_max - 272.15);
 
 
     if(weather[0].main == "Clouds"){
@@ -53,11 +55,11 @@ function insertarDatos(temp,temp_min,temp_max,name,weather,imagen){
             </div>
             <div class="clima">
                 <div><h4>${weather}</h4></div>
-                <img src="../img/${imagen}" alt="${imagen}">
+                <img src="./img/${imagen}" alt="${imagen}">
             </div>
        
     `;
 }
 
 
-consultarAPI('México','Pachuca de Soto');
+consultarAPI('México','Pachuca');
