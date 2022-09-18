@@ -7,3 +7,62 @@
 .hide-right{
     transform: translateX(100%);
 }
+
+
+
+
+.hide-mapa-lugar{
+    display: none !important;
+}
+#mapa-lugar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: all ease-in 0.3s;
+}
+#info-arrive{
+    padding: 1rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    text-align: center;
+    border: 1px solid #e9e9e9;
+    position: relative;
+}
+#info-arrive aside{
+    margin-bottom: 1rem;
+}
+#info-arrive aside h3{
+    color: var(--oliva);
+}
+.fa-square-xmark{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.5rem;
+    color: rgb(189, 34, 34);
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 400px){
+    #info-arrive{
+        padding: 0.5rem;
+        width: 280px;
+    }
+    #info-arrive aside{
+        margin-bottom: 0.5rem;
+    }
+    #info-arrive aside h3{
+        font-size: 0.6rem;
+        color: var(--oliva);
+    }
+}

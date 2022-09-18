@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/introduccion.css" />
     <link rel="stylesheet" href="./css/mapa.css" />
+    <link rel="stylesheet" href="./css/pueblosMagicosDescripcion.css" />
+    <link rel="stylesheet" href="./css/balneariosMagicosDescripcion.css" />
     <link rel="icon" href="" />
     <title>Pueblos Magicos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,8 +23,8 @@
   <body>
     <section id="nav-mobil" class="hide-menu-hamburguer">
       <ul>
-        <li><a href="#">Pueblos mágicos</a></li>
-        <li><a href="#">Parques acuáticos</a></li>
+        <li><a href="#pueblos-magicos-descripcion">Pueblos mágicos</a></li>
+        <li><a href="#balnearios-magicos-descripcion">Parques acuáticos</a></li>
         <li><a href="#">Otros lugares</a></li>
         <li><a href="#">Ocio</a></li>
         <li><a href="#">Nosotros</a></li>
@@ -33,8 +35,8 @@
     <nav id="navegacion">
       <div id="btn-hamburguer"><i class="fa-sharp fa-solid fa-bars"></i></div>
       <ul>
-        <li><a href="#">Pueblos mágicos</a></li>
-        <li><a href="#">Parques acuáticos</a></li>
+        <li><a href="#pueblos-magicos-descripcion">Pueblos mágicos</a></li>
+        <li><a href="#balnearios-magicos-descripcion">Parques acuáticos</a></li>
         <li><a href="#">Otros lugares</a></li>
         <li><a href="#">Ocio</a></li>
         <li><a href="#">Nosotros</a></li>
@@ -90,32 +92,39 @@
       ></iframe>
     </section>
 
-    <section id="pueblos-magicos-descripcion">
-      <h1></h1>
+    <section id="pueblos-magicos-descripcion" class="hide-left">
+      <h1>Pueblos Mágicos de Hidalgo</h1>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi, odio
-        veniam sint magni neque praesentium expedita vel asperiores minima
-        nostrum modi, reiciendis similique soluta, veritatis facilis quod
-        repudiandae at iste.
+        El Estado de Hidalgo es uno de los que cuenta con mayor cantidad de
+        pueblos mágicos, seis en total: Huasca de Ocampo, Real del Monte,
+        Mineral del Chico, Huichapan, Tecozautla, Zempoala y Zimapán. De hecho,
+        Huasca de Ocampo fue en 2001 el primer pueblo de todo el país en recibir
+        esta designación. ¿Qué significa esto de “pueblos mágicos”? Es una
+        distinción que otorga la Secretaría de Turismo de México a distintos
+        lugares que se destacan por su tradición, cultura, arquitectura e
+        historia, buscando preservar estas características y promover el
+        turismo.
       </p>
     </section>
 
+    <section id="mapa-lugar" class="hide-mapa-lugar"></section>
+
     <section id="pueblos-magicos-imagenes">
-      <div class="image image-1"></div>
+      <div id="pueblos" class="hide-right"></div>
     </section>
 
-    <section id="blanearios-magicos-descripcion">
-      <h1></h1>
+    <section id="balnearios-magicos-descripcion" class="hide-left">
+      <h1>Balnearios en Hidalgo</h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
-        expedita atque officia, odio eum provident. Nobis labore, quas earum
-        quae repellat maxime aperiam. Non beatae ipsum placeat nesciunt
-        aspernatur atque.
+        En Hidalgo tambien podemos encontrar una variedad de parques acuaticos,
+        todos aptos para la familia, puedes divertirte deslizandote por una gran
+        variedad de toboganes, ejercitarte en grandes picinas o simplemente
+        relajarte con aguas termales
       </p>
     </section>
 
     <section id="balnearios-imagenes">
-      <div class="image image-1"></div>
+      <div id="balnearios" class="hide-right"></div>
     </section>
 
     <section id="otros-lugares-descripcion">
@@ -155,7 +164,10 @@
     <script src="./scripts/header.js"></script>
     <script src="./scripts/introduccion.js"></script>
     <script src="./scripts/mapa.js"></script>
-    <script src="./scripts/clima.js"></script>
     <script src="./scripts/nav.js"></script>
+    <script src="./scripts/clima.js"></script>
+    <script src="./scripts/pueblosMagicosDescripcion.js"></script>
+    <script src="./scripts/balneariosMagicosDescripcion.js"></script>
+    <script src="./scripts/modal.js"></script>
   </body>
 </html>

@@ -1,3 +1,5 @@
+
+
 function consultarAPI(pais,ciudad){
     const apiId = "84d70eb0548ae3641b62fbc3332ef7a1";
 
@@ -63,3 +65,106 @@ function insertarDatos(temp,temp_min,temp_max,name,weather,imagen){
 
 
 consultarAPI('México','Pachuca');
+
+
+
+let climasPueblos = new Array();
+
+function obtenerClimaPueblosMagicos(pais,estado,ciudad){
+    const apiId = "84d70eb0548ae3641b62fbc3332ef7a1";
+    
+    const url = `http://api.openweathermap.org/data/2.5/weather?q=${ciudad},${estado},${pais}&appid=${apiId}`;
+    
+    return fetch(url)
+        .then(respuesta => respuesta.json())
+        .then(datos => obtenerTemperatura(datos,ciudad))
+}
+
+function obtenerTemperatura(datos,ciudad) {
+    const containerPueblos = document.querySelector('#pueblos');
+    const {main:{temp}} = datos;
+    const temperatura = parseInt(temp - 271.15);
+    ciudad = ciudad.replace(/\s+/g, '');
+    ciudad = ciudad.toLowerCase();
+    
+    containerPueblos.innerHTML = "";
+
+    lugares.forEach(lugar => {
+        if(lugar.tipo != "balneario"){
+            if(lugar.idSearch == ciudad){
+                //console.log("Coincide " + ciudad);
+                lugar.clima = temperatura;
+                //console.log(lugar.idSearch + ": " + lugar.clima);
+            }
+            const div = document.createElement('div');
+            div.setAttribute('id',lugar.id);
+            div.setAttribute('data-map',lugar.mapaUrl);
+            div.classList.add('scale');
+            div.innerHTML = 
+            `
+                <img src="${lugar.img}" />
+                <div id="say-weather">
+                <p>${lugar.name}</p>
+                <button id="ver-mas">Ver</button>
+                <i class="fa-solid fa-temperature-three-quarters"></i>
+                <h4>${lugar.clima}°C</h4>
+                </div>
+            `;
+            containerPueblos.appendChild(div);
+        }
+    });
+
+
+    const scale = document.querySelectorAll('.scale');
+    scale.forEach(item => {
+        item.addEventListener('mouseover',e=>{//Sobre
+            e.stopPropagation();
+            item.childNodes[3].classList.add('show-say');
+        });
+        item.addEventListener('mouseout',e=>{//Sobre
+            e.stopPropagation();
+            item.childNodes[3].classList.remove('show-say');
+        });
+    });
+
+    /*Esta es la logica para obtener los datos y mostrarlos en un modal */
+    const btnVerMasPueblo = document.querySelectorAll('#ver-mas');
+    btnVerMasPueblo.forEach(btn => {
+        btn.addEventListener('click',e=>{
+            let mapURL = e.target.parentElement.parentElement.getAttribute('data-map');
+            let name = e.target.parentElement.childNodes[1].textContent;
+            showModal(mapURL,name);
+        });
+    })
+    /*Esta es la logica para obtener los datos y mostrarlos en un modal */
+}
+
+obtenerClimaPueblosMagicos('México','Hidalgo','Huichapan');
+obtenerClimaPueblosMagicos('México','Hidalgo','Huasca de Ocampo');
+obtenerClimaPueblosMagicos('México','Hidalgo','Mineral del Monte');
+obtenerClimaPueblosMagicos('México','Hidalgo','Zimapán');
+obtenerClimaPueblosMagicos('México','Hidalgo','Zempoala');
+obtenerClimaPueblosMagicos('México','Hidalgo','Tecozautla');
+obtenerClimaPueblosMagicos('México','Hidalgo','Mineral del Chico');
+
+
+
+const containerBalnearios = document.querySelector('#balnearios');
+
+lugares.forEach(lugar => {
+    if(lugar.tipo == "balneario"){
+        const div = document.createElement('div');
+        div.setAttribute('id',lugar.id);
+        div.setAttribute('data-map',lugar.mapaUrl);
+        div.classList.add('scale');
+        div.innerHTML = 
+        `
+        <img src="${lugar.img}" />
+        <div id="say-weather">
+          <p>${lugar.name}</p>
+          <button id="ver-mas">Ver</button>
+        </div>
+        `;
+        containerBalnearios.appendChild(div);
+    }
+});

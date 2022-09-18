@@ -1,0 +1,84 @@
+#balnearios-magicos-descripcion{
+    width: 100%;
+    margin: 0 auto 2rem auto;
+    padding: 0.5rem 5rem;
+    color: #3b3b3b;
+    transition: all ease-in 0.6s;
+}
+#balnearios-magicos-descripcion h1{
+    color: var(--oliva);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 1rem 0;
+}
+#balnearios-magicos-descripcion p{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+#balnearios-imagenes{
+    width: 100%;
+    overflow: hidden;
+}
+#balnearios{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 200px 200px;
+    width: 100%;
+    padding: 1rem;
+    gap: 1rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    transition: all ease-in 0.6s;   
+}
+
+
+
+
+@media screen and (max-width: 800px){
+    #balnearios-magicos-descripcion > h1{
+        font-size: 2rem;
+    }
+    #balnearios-magicos-descripcion > p {
+        font-size: 1rem !important;
+    }
+}
+@media screen and (max-width: 475px){
+    #balnearios-magicos-descripcion > h1{
+        font-size: 1.5rem;
+    }
+    #balnearios-magicos-descripcion > p {
+        font-size: 0.6rem !important;
+    }
+    #balnearios-magicos-descripcion{
+        padding: 0.5rem 1rem !important;
+    }
+}
+@media screen and (max-width: 650px){
+    #balnearios{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 200px 200px 200px 200px;
+        padding: 1rem;
+        gap: 1rem; 
+    }
+}
+@media screen and (max-width: 363px){
+    #balnearios{
+        padding: 0.2rem;
+        gap: 0.2rem; 
+    }
+}
+@media screen and (max-width: 285px){
+    #balnearios{
+        grid-template-rows: 150px 150px 150px 150px;
+    }
+}
+.tephe:hover  {-webkit-transform:scale(1);transform:scale(1.1);}
+.ecoalberto:hover  {-webkit-transform:scale(1);transform:scale(1.1);}
+.santana:hover  {-webkit-transform:scale(1);transform:scale(1.1);}
+.tollan:hover  {-webkit-transform:scale(1);transform:scale(1.1);}
+.geiser:hover  {-webkit-transform:scale(1);transform:scale(1.1);}
+.maguey:hover  {-webkit-transform:scale(1);transform:scale(1.1);}
+.baño:hover  {-webkit-transform:scale(1);transform:scale(1.1);}
+.tepathe:hover  {-webkit-transform:scale(1);transform:scale(1.1);}
